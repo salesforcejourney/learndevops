@@ -8,6 +8,7 @@ public with sharing class FileUtilities {
         try {
             ContentVersion contentVersion = new ContentVersion();
             contentVersion.VersionData = EncodingUtil.base64Decode(base64data);
+            System.debug('Changes in file utility');
             contentVersion.Title = filename;
             contentVersion.PathOnClient = filename;
             insert contentVersion;
